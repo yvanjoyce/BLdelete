@@ -6,8 +6,8 @@ ${url}                    https://tools.brightlocal.com/seo-tools/admin/login?re
 ${browser}                chrome
 
 #update <<<<<
-${password}               #pass
-${username}              #username
+${password}               76230e7c
+${username}              mariel.mojares@ollyolly.com
 @{company_list}           Hall's Tree Service, LLC      Wren House Inspection, LLC        Capitol Square Management              East Coast Chargers, LLC        Sharp's Excavating LLC        606 MASONRY LLC        Cosmic Junk Removal        True Line Services LLC        Exact Fit Seamless Gutters Of Westchester Inc.    E-genius Appliance Repair        Hall's Tree Service, LLC        Helton Slider Repair        Taylor Kathleen Interiors        Admirable Home Inspections LLC
 
 
@@ -59,27 +59,6 @@ Search Company
     Wait Until Page Contains Element                xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]         #click on delete
     Click Button              xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]         #click on delete
     Sleep       5s
-
-#Process Report Views
-#    ${success}=    Set Variable    ${TRUE}
-#    FOR    ${index}    IN RANGE    1    7
-#        Log         delete  ${index}
-#        Capture Page Screenshot
-#        Click Element     xpath=//*[@id="contentWrapper"]/div[3]/div[2]/table/tbody/tr[${index}]/td[4]/div/a[1]
-#        Log          click action button ${index}
-#        Click Button         xpath=//*[@id="contentWrapper"]/div[4]/div/header/div[2]/div/div/button
-#        Wait Until Element Is Visible    xpath=//div[contains(@class, '${DROPDOWN_CLASS}')]/ul/li/a[contains(text(), '${LINK_TEXT}')]    ${TIMEOUT}
-#        Click Element    xpath=//div[contains(@class, '${DROPDOWN_CLASS}')]/ul/li/a[contains(text(), '${LINK_TEXT}')]
-#        Go Back
-#        ${is_logged_out}=    Check If Logged Out
-#        ${index_minus_1}=    Evaluate    ${index} - 1
-#        Run Keyword Unless    ${is_logged_out}    Click Element    xpath=//*[@id="contentWrapper"]/div[3]/div[2]/table/tbody/tr[${index}]/td[4]/div/a[2]
-#        ${visible}=    Run Keyword And Return Status    Element Should Be Visible    xpath=//*[@id="campaignHistoryActions-${index_minus_1}"]/li/form/button
-#
-#        Run Keyword unless          ${visible}     Go Back Twice
-#        Click Button     xpath=//*[@id="campaignHistoryActions-${index_minus_1}"]/li/form/button
-#    END
-#     Run Keyword If    ${success}    Go Back Twice
 
 Go Back To Search Page
     Go Back

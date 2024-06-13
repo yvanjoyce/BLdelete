@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.9 on win32)" generated="2024-06-13T20:05:43.890195" rpa="false" schemaversion="5">
+<suite id="s1" name="Delete" source="C:\Users\Yvan\PycharmProjects\BLDeletion\delete.robot">
+<test id="s1-t1" name="Download Reports for All Companies" line="24">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:05:44.068688" level="INFO">Opening browser 'chrome' to base url 'https://tools.brightlocal.com/seo-tools/admin/login?redirect_url=%252Fseo-tools%252Fadmin%252Flsrc%253F&amp;redirect_source=access_control'.</msg>
+<msg time="2024-06-13T20:05:44.482727" level="WARN">The chromedriver version (125.0.6422.60) detected in PATH at C:\Users\Yvan\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (126.0.6478.56); currently, chromedriver 126.0.6478.55 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-13T20:05:44.068688" elapsed="6.371058"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-13T20:05:50.440837" elapsed="0.026649"/>
+</kw>
+<kw name="Perform Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:05:50.468527" level="INFO">Typing text 'mariel.mojares@ollyolly.com' into text field 'xpath=/html/body/div[1]/div/div[1]/form/input[1]'.</msg>
+<arg>xpath=/html/body/div[1]/div/div[1]/form/input[1]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:05:50.468527" elapsed="0.218558"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:05:50.688157" level="INFO">Typing text '76230e7c' into text field 'xpath=/html/body/div[1]/div/div[1]/form/input[2]'.</msg>
+<arg>xpath=/html/body/div[1]/div/div[1]/form/input[2]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:05:50.688157" elapsed="0.184073"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:05:50.872230" level="INFO">Clicking button 'xpath=/html/body/div[1]/div/div[1]/form/div[2]/button'.</msg>
+<arg>xpath=/html/body/div[1]/div/div[1]/form/div[2]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:05:50.872230" elapsed="0.089108"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-13T20:05:50.961338" elapsed="5.929073"/>
+</kw>
+<status status="PASS" start="2024-06-13T20:05:50.467486" elapsed="6.422925"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:05:56.890411" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:05:56.890411" elapsed="1.433199"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Search Company">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T20:05:58.324627" elapsed="1.858028"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:00.182655" level="INFO">Typing text 'Hall's Tree Service, LLC' into text field 'xpath=//*[@id="query"]'.</msg>
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:06:00.182655" elapsed="0.170823"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:00.353478" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:06:00.353478" elapsed="0.129644"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T20:06:03.484615" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T20:06:00.484138" elapsed="3.000477"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-13T20:06:03.484615" level="INFO">found BL company</msg>
+<arg>found BL company</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-13T20:06:03.484615" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:03.591022" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-13T20:06:03.591022" level="FAIL">Element with locator 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' not found.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-06-13T20:06:03.485678" elapsed="0.117881">Element with locator 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' not found.</status>
+</kw>
+<msg time="2024-06-13T20:06:03.603559" level="INFO">${visible} = False</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-13T20:06:03.485678" elapsed="0.117881"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-06-13T20:06:03.603559" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-13T20:06:03.604565" level="INFO">cannot be found &gt; not deleted</msg>
+<arg>cannot be found &gt; not deleted</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-13T20:06:03.604565" elapsed="0.000000"/>
+</kw>
+<arg>${visible}</arg>
+<arg>log</arg>
+<arg>cannot be found &gt; not deleted</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2024-06-13T20:06:03.603559" elapsed="0.001006"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-06-13T20:06:03.604565" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:03.605551" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:06:03.605551" elapsed="0.039461"/>
+</kw>
+<arg>${visible}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2024-06-13T20:06:03.604565" elapsed="0.040447"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-13T20:06:03.645012" level="INFO">click delete</msg>
+<arg>click delete</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-13T20:06:03.645012" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:03.646046" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button'.</msg>
+<msg time="2024-06-13T20:06:03.755903" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-13T20:06:03.755903" level="FAIL">Button with locator 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' not found.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-13T20:06:03.645012" elapsed="0.111896">Button with locator 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, '${DROPDOWN_CLASS1}')]/ul/li[contains(text(), '${LINK_TEXT1}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:03.756908" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath= /html/body/div[10]/div[2]/div[4]/input</arg>
+<arg>PERMANENTLY DELETE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:03.756908" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:03.756908" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:03.756908" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:03.756908" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:03.756908" elapsed="0.000000"/>
+</kw>
+<arg>${company}</arg>
+<status status="FAIL" start="2024-06-13T20:05:58.324627" elapsed="5.432281">Button with locator 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' not found.</status>
+</kw>
+<arg>Search Company</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-13T20:05:58.324627" elapsed="5.432281"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:03.757941" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:06:03.756908" elapsed="0.034942"/>
+</kw>
+<var name="${company}">Hall's Tree Service, LLC</var>
+<status status="PASS" start="2024-06-13T20:05:58.324627" elapsed="5.467223"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Search Company">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T20:06:03.791850" elapsed="0.015971"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:03.807821" level="INFO">Typing text 'Wren House Inspection, LLC' into text field 'xpath=//*[@id="query"]'.</msg>
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:06:03.807821" elapsed="0.142478"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:03.951312" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:06:03.950299" elapsed="0.071643"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T20:06:07.023268" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T20:06:04.022942" elapsed="3.000326"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-13T20:06:07.023268" level="INFO">found BL company</msg>
+<arg>found BL company</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-13T20:06:07.023268" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:07.124184" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-13T20:06:07.124184" level="FAIL">Element with locator 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' not found.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-06-13T20:06:07.024307" elapsed="0.100897">Element with locator 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' not found.</status>
+</kw>
+<msg time="2024-06-13T20:06:07.125204" level="INFO">${visible} = False</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-13T20:06:07.024307" elapsed="0.100897"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-06-13T20:06:07.125204" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-13T20:06:07.126225" level="INFO">cannot be found &gt; not deleted</msg>
+<arg>cannot be found &gt; not deleted</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-13T20:06:07.126225" elapsed="0.000000"/>
+</kw>
+<arg>${visible}</arg>
+<arg>log</arg>
+<arg>cannot be found &gt; not deleted</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2024-06-13T20:06:07.125204" elapsed="0.001021"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-06-13T20:06:07.126225" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:07.127237" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:06:07.127237" elapsed="0.041684"/>
+</kw>
+<arg>${visible}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2024-06-13T20:06:07.126225" elapsed="0.042696"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-13T20:06:07.168921" level="INFO">click delete</msg>
+<arg>click delete</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-13T20:06:07.168921" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:07.168921" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button'.</msg>
+<msg time="2024-06-13T20:06:07.279259" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-06-13T20:06:07.279259" level="FAIL">Button with locator 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' not found.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-13T20:06:07.168921" elapsed="0.111346">Button with locator 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, '${DROPDOWN_CLASS1}')]/ul/li[contains(text(), '${LINK_TEXT1}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:07.280267" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath= /html/body/div[10]/div[2]/div[4]/input</arg>
+<arg>PERMANENTLY DELETE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:07.280267" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:07.280267" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:07.280267" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:07.280267" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:07.280267" elapsed="0.000000"/>
+</kw>
+<arg>${company}</arg>
+<status status="FAIL" start="2024-06-13T20:06:03.791850" elapsed="3.488417">Button with locator 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button' not found.</status>
+</kw>
+<arg>Search Company</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-13T20:06:03.791850" elapsed="3.488417"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:07.281281" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:06:07.281281" elapsed="0.035312"/>
+</kw>
+<var name="${company}">Wren House Inspection, LLC</var>
+<status status="PASS" start="2024-06-13T20:06:03.791850" elapsed="3.524743"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Search Company">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-13T20:06:07.317690" elapsed="0.012327"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:07.331042" level="INFO">Typing text 'Capitol Square Management' into text field 'xpath=//*[@id="query"]'.</msg>
+<arg>xpath=//*[@id="query"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:06:07.331042" elapsed="0.131225"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:07.462267" level="INFO">Clicking button 'xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button'.</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-13T20:06:07.462267" elapsed="0.069801"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-13T20:06:10.532355" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-13T20:06:07.532068" elapsed="3.000287"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-13T20:06:10.532859" level="INFO">found BL company</msg>
+<arg>found BL company</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-13T20:06:10.532355" elapsed="0.000504"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:10.534862" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</msg>
+<msg time="2024-06-13T20:06:10.535862" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</msg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-06-13T20:06:10.532859" elapsed="0.005006">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</status>
+</kw>
+<msg time="2024-06-13T20:06:10.537865" level="INFO">${visible} = False</msg>
+<var>${visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-06-13T20:06:10.532859" elapsed="0.005006"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-06-13T20:06:10.537865" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-13T20:06:10.538863" level="INFO">cannot be found &gt; not deleted</msg>
+<arg>cannot be found &gt; not deleted</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-13T20:06:10.538863" elapsed="0.000000"/>
+</kw>
+<arg>${visible}</arg>
+<arg>log</arg>
+<arg>cannot be found &gt; not deleted</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2024-06-13T20:06:10.537865" elapsed="0.000998"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2024-06-13T20:06:10.538863" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:10.539863" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<msg time="2024-06-13T20:06:10.542864" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</msg>
+<msg time="2024-06-13T20:06:10.542864" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-13T20:06:10.539863" elapsed="0.004001">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</status>
+</kw>
+<arg>${visible}</arg>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="FAIL" start="2024-06-13T20:06:10.538863" elapsed="0.005001">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>click delete</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:10.544864" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="contentWrapper"]/div/div[2]/div[2]/div[1]/div/div/div[2]/div[2]/div/div[3]/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:10.544864" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, '${DROPDOWN_CLASS1}')]/ul/li[contains(text(), '${LINK_TEXT1}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:10.544864" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath= /html/body/div[10]/div[2]/div[4]/input</arg>
+<arg>PERMANENTLY DELETE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:10.544864" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:10.544864" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:10.544864" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 's-mts flex end-center')]/button[contains(text(), 'Permanently Delete')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:10.544864" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:10.544864" elapsed="0.000000"/>
+</kw>
+<arg>${company}</arg>
+<status status="FAIL" start="2024-06-13T20:06:07.317690" elapsed="3.227174">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</status>
+</kw>
+<arg>Search Company</arg>
+<arg>${company}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-06-13T20:06:07.316593" elapsed="3.228271"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-13T20:06:10.545864" level="INFO">Clicking element 'xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span'.</msg>
+<msg time="2024-06-13T20:06:10.547865" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</msg>
+<msg time="2024-06-13T20:06:10.548865" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</msg>
+<arg>xpath=//*[@id="main-nav"]/nav/section/ul[1]/li[2]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-06-13T20:06:10.544864" elapsed="0.004001">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</status>
+</kw>
+<var name="${company}">Capitol Square Management</var>
+<status status="FAIL" start="2024-06-13T20:06:07.316593" elapsed="3.233273">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</status>
+</iter>
+<var>${company}</var>
+<value>@{company_list}</value>
+<status status="FAIL" start="2024-06-13T20:05:58.323610" elapsed="12.226256">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</status>
+</for>
+<kw name="Close Window" owner="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="NOT RUN" start="2024-06-13T20:06:10.549866" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-13T20:05:44.067696" elapsed="26.482170">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</status>
+</test>
+<status status="FAIL" start="2024-06-13T20:05:43.891197" elapsed="26.660670"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Delete">Delete</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-13T20:05:43.884750" level="WARN">Error in file 'C:\Users\Yvan\PycharmProjects\BLDeletion\delete.robot' on line 69: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-06-13T20:05:44.482727" level="WARN">The chromedriver version (125.0.6422.60) detected in PATH at C:\Users\Yvan\AppData\Local\Programs\Python\Python311\Scripts\chromedriver.exe might not be compatible with the detected chrome version (126.0.6478.56); currently, chromedriver 126.0.6478.55 is recommended for chrome 126.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-06-13T20:06:03.603559" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-06-13T20:06:03.604565" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-06-13T20:06:07.125204" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-06-13T20:06:07.126225" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-06-13T20:06:10.534862" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</msg>
+<msg time="2024-06-13T20:06:10.537865" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-06-13T20:06:10.538863" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2024-06-13T20:06:10.542864" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</msg>
+<msg time="2024-06-13T20:06:10.547865" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=126.0.6478.56)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D4AA22C2+60002]
+	(No symbol) [0x00007FF6D4A1CA59]
+	(No symbol) [0x00007FF6D48D7EDA]
+	(No symbol) [0x00007FF6D48AD5B5]
+	(No symbol) [0x00007FF6D4953727]
+	(No symbol) [0x00007FF6D496B3A1]
+	(No symbol) [0x00007FF6D494C033]
+	(No symbol) [0x00007FF6D4919657]
+	(No symbol) [0x00007FF6D491A251]
+	GetHandleVerifier [0x00007FF6D4DB3E2D+3278285]
+	GetHandleVerifier [0x00007FF6D4E00190+3590448]
+	GetHandleVerifier [0x00007FF6D4DF61D0+3549552]
+	GetHandleVerifier [0x00007FF6D4B51DE6+779654]
+	(No symbol) [0x00007FF6D4A27ACF]
+	(No symbol) [0x00007FF6D4A22EE4]
+	(No symbol) [0x00007FF6D4A23072]
+	(No symbol) [0x00007FF6D4A12C4F]
+	BaseThreadInitThunk [0x00007FFE7AF5257D+29]
+	RtlUserThreadStart [0x00007FFE7C8AAA48+40]
+</msg>
+</errors>
+</robot>
