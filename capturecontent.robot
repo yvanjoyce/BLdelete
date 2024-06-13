@@ -4,8 +4,8 @@ Library      SeleniumLibrary
 *** Variables ***
 ${url}                    https://tools.brightlocal.com/seo-tools/admin/login?redirect_url=%252Fseo-tools%252Fadmin%252Flsrc%253F&redirect_source=access_control
 ${browser}                chrome
-${password}               76230e7c
-${username}               mariel.mojares@ollyolly.com
+${password}
+${username}
 ${DROPDOWN_CLASS1}       dropdown-content
 ${LINK_TEXT1}            Report History
 
